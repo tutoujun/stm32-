@@ -10,9 +10,9 @@ void KEY_Init(void){
 }
 uint8_t KEY_GetNum(void){
 	uint8_t Key_Num=0;
-	if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_2)==1){
+	if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_2)==0){
 		Delay_ms(20);
-		while(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_2)==1);
+		while(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_2)==0);
 		Delay_ms(20);
 		Key_Num=1;
 	}
